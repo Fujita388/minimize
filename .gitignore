@@ -5,3 +5,6 @@ a.out
 log.lammps
 *.mpg
 *.png
+*.cpp
+*.h
+*.plt
