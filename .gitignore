@@ -1,0 +1,7 @@
+a.out
+*.lammpstrj
+*.o
+*.dat
+log.lammps
+*.mpg
+*.png
