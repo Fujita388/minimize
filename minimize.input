@@ -1,3 +1,5 @@
+log log_minimize.lammps
+
 units lj
 atom_style bond
 
@@ -23,9 +25,6 @@ bond_coeff 1 30.0 1.5 1.5 1.0
 
 neighbor 0.3 bin
 neigh_modify every 20 delay 0 check no
-
-###nvtはいる？？？
-###fix 1 all nvt temp 0.7 0.7 0.1
 
 dump id all custom 100 minimize.lammpstrj id type x y z vx vy vz
 

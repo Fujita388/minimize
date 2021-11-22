@@ -2,9 +2,10 @@ a.out
 *.lammpstrj
 *.o
 *.dat
-log.lammps
+*.lammps
 *.mpg
 *.png
 *.cpp
 *.h
 *.plt
+execute.sh.*
