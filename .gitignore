@@ -1,4 +1,4 @@
-a.out
+*.out
 *.lammpstrj
 *.o
 *.dat
@@ -8,4 +8,5 @@ a.out
 *.cpp
 *.h
 *.plt
-execute.sh.*
+*.sh.*
+*.atoms
