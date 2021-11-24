@@ -1,4 +1,6 @@
 #!/bin/sh
+#PBS -M naofuji.1220@gmail.com
+#PBS -m be
 #PBS -l nodes=1:ppn=20
 
 cd $PBS_O_WORKDIR
