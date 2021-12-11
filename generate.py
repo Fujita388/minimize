@@ -52,9 +52,9 @@ def save_file(filename, atoms):
 		f.write("Position Data\n\n")
 		f.write("{} atoms\n".format(len(atoms)))
 		f.write("1 atom types\n\n")
-		f.write("0.00 17.00 xlo xhi\n")
-		f.write("0.00 17.00 ylo yhi\n")
-		f.write("0.00 17.00 zlo zhi\n")
+		f.write("0.00 51.00 xlo xhi\n")
+		f.write("0.00 51.00 ylo yhi\n")
+		f.write("0.00 51.00 zlo zhi\n")
 		f.write("\n")
 		f.write("Atoms\n\n")
 		for i, a in enumerate(atoms):
@@ -68,6 +68,6 @@ def save_file(filename, atoms):
 
 atoms = []
 
-add_ball(atoms, 17, 0.8)
+add_ball(atoms, 51, 0.8)
 
 save_file("single.atoms", atoms)

@@ -1,5 +1,3 @@
-log log_single.lammps
-
 units lj
 atom_style atomic
 boundary p p p
@@ -17,7 +15,7 @@ neigh_modify every 20 delay 0 check no
 
 fix 1 all nvt temp 0.7 0.7 0.1
 
-dump id all custom 100 single.lammpstrj id type x y z vx vy vz
+dump id all custom 1000 single.lammpstrj id type x y z vx vy vz
 
 thermo 500
 run 20000
