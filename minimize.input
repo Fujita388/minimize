@@ -27,4 +27,4 @@ neigh_modify every 20 delay 0 check no
 dump id all custom 1 minimize.lammpstrj id type x y z vx vy vz
 
 #構造緩和
-minimize 1.0e-10 1.0e-10 8 10000
+minimize 1.0e-10 1.0e-10 50 10000

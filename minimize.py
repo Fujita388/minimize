@@ -89,5 +89,5 @@ def save_file(atoms, num_bonds, L):
 
 atoms = []
 bonds_list = []  #atoms_idのペアのリスト
-num_bonds, L = read_dump(atoms, bonds_list, "single.lammpstrj", 4582)
+num_bonds, L = read_dump(atoms, bonds_list, "single.lammpstrj", 1289)
 save_file(atoms, num_bonds, L)

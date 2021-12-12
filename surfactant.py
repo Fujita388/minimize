@@ -33,20 +33,20 @@ def rescale(atoms, bonds, atoms_file, dump_file, scale):
     L = float(dl.split()[1])  #ボックスサイズ
     num_atoms = int(atoms_data[2].split()[0])  #atomの数
     num_bonds = int(atoms_data[3].split()[0])  #bondの数
-    mol_list = [0 for i in range(num_atoms+num_bonds)]  #mol_idのリスト(mol_idをatoms_idに紐づける)
+    mol_list = [0 for i in range(num_atoms+num_bonds)]
     for i, line in enumerate(atoms_data):
         if "Atoms" in line:
             while i+2 < num_atoms+14:
                 atoms_id = int(atoms_data[i+2].split()[0])
                 mol_id = int(atoms_data[i+2].split()[1])
-                mol_list[atoms_id-1] = mol_id
+                mol_list[atoms_id-1] = mol_id  #mol_idをatoms_idにひもづける
                 i += 1
         if "Bonds" in line:
             while len(atoms_data) > i+2:
                 bl = atoms_data[i+2].split()
                 bonds.append(Bonds(bl[0], bl[1], bl[2], bl[3]))
                 i += 1
-    for i in range(num_atoms):  #dump_file
+    for i in range(num_atoms):
         position = dump_data[step[-1]+9+i]  #最後のグループの座標dataの先頭
         atoms_id = int(position.split()[0])
         atoms_type = int(position.split()[1])
@@ -82,7 +82,7 @@ def save_file(atoms, bonds, L, scale):
         print("{} {} {} {}".format(a.bonds_id, a.bonds_type, a.atoms_id1, a.atoms_id2))
 
 
-atoms = []  #dump_fileのid, type, x, y, z, vx, vy, vzを保存したリスト
+atoms = []  #dump_fileのAtomsを保存したリスト
 bonds = []  #atoms_fileのBondsを保存したリスト
 L = rescale(atoms, bonds, "minimize.atoms", "minimize.lammpstrj", 1.05)
 save_file(atoms, bonds, L, 1.05)

@@ -1,12 +1,7 @@
 *.out
 *.lammpstrj
 *.o
-*.dat
 *.lammps
-*.mpg
-*.png
-*.cpp
-*.h
-*.plt
 *.sh.*
 *.atoms
+memo.txt
